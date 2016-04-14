@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Set status bar to light content
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
+        
+        // Set tabBar color
+        UITabBar.appearance().barTintColor = UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.3);
+        // Set tabBar selected item color
+        UITabBar.appearance().tintColor = UIColor(red: 223/255, green: 58/255, blue: 9/255, alpha: 1);
+        
+        // Set search bar tint
+        UISearchBar.appearance().barTintColor = UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8);
+        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)], forState: UIControlState.Normal);
+
         return true
     }
 
