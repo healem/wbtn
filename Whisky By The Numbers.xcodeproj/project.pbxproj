@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		79311AF51CBEB90B00AF06BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311AF41CBEB90B00AF06BC /* AppDelegate.swift */; };
 		79311AF71CBEB90B00AF06BC /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311AF61CBEB90B00AF06BC /* BlogViewController.swift */; };
-		79311AF91CBEB90B00AF06BC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311AF81CBEB90B00AF06BC /* FavoritesViewController.swift */; };
 		79311AFC1CBEB90B00AF06BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79311AFA1CBEB90B00AF06BC /* Main.storyboard */; };
 		79311AFE1CBEB90B00AF06BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79311AFD1CBEB90B00AF06BC /* Assets.xcassets */; };
 		79311B011CBEB90B00AF06BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79311AFF1CBEB90B00AF06BC /* LaunchScreen.storyboard */; };
 		79311B0C1CBEB90B00AF06BC /* Whisky_By_The_NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311B0B1CBEB90B00AF06BC /* Whisky_By_The_NumbersTests.swift */; };
 		79311B171CBEB90B00AF06BC /* Whisky_By_The_NumbersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311B161CBEB90B00AF06BC /* Whisky_By_The_NumbersUITests.swift */; };
+		79311B251CC19C3900AF06BC /* Whiskey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311B241CC19C3900AF06BC /* Whiskey.swift */; };
+		79311B271CC1A31E00AF06BC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311B261CC1A31E00AF06BC /* FavoritesViewController.swift */; };
+		79311B291CC1A53400AF06BC /* FavoritesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311B281CC1A53400AF06BC /* FavoritesDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		79311AF11CBEB90A00AF06BC /* Whisky By The Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whisky By The Numbers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79311AF41CBEB90B00AF06BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79311AF61CBEB90B00AF06BC /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
-		79311AF81CBEB90B00AF06BC /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		79311AFB1CBEB90B00AF06BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79311AFD1CBEB90B00AF06BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79311B001CBEB90B00AF06BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		79311B121CBEB90B00AF06BC /* Whisky By The NumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whisky By The NumbersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79311B161CBEB90B00AF06BC /* Whisky_By_The_NumbersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whisky_By_The_NumbersUITests.swift; sourceTree = "<group>"; };
 		79311B181CBEB90B00AF06BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79311B241CC19C3900AF06BC /* Whiskey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whiskey.swift; sourceTree = "<group>"; };
+		79311B261CC1A31E00AF06BC /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		79311B281CC1A53400AF06BC /* FavoritesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				79311AF41CBEB90B00AF06BC /* AppDelegate.swift */,
 				79311AF61CBEB90B00AF06BC /* BlogViewController.swift */,
-				79311AF81CBEB90B00AF06BC /* FavoritesViewController.swift */,
 				79311AFA1CBEB90B00AF06BC /* Main.storyboard */,
 				79311AFD1CBEB90B00AF06BC /* Assets.xcassets */,
 				79311AFF1CBEB90B00AF06BC /* LaunchScreen.storyboard */,
 				79311B021CBEB90B00AF06BC /* Info.plist */,
+				79311B241CC19C3900AF06BC /* Whiskey.swift */,
+				79311B261CC1A31E00AF06BC /* FavoritesViewController.swift */,
+				79311B281CC1A53400AF06BC /* FavoritesDetailViewController.swift */,
 			);
 			path = "Whisky By The Numbers";
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79311AF91CBEB90B00AF06BC /* FavoritesViewController.swift in Sources */,
+				79311B251CC19C3900AF06BC /* Whiskey.swift in Sources */,
 				79311AF51CBEB90B00AF06BC /* AppDelegate.swift in Sources */,
+				79311B271CC1A31E00AF06BC /* FavoritesViewController.swift in Sources */,
+				79311B291CC1A53400AF06BC /* FavoritesDetailViewController.swift in Sources */,
 				79311AF71CBEB90B00AF06BC /* BlogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

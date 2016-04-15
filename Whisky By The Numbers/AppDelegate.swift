@@ -21,13 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
         
         // Set tabBar color
-        UITabBar.appearance().barTintColor = UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.3);
+        UITabBar.appearance().barTintColor = UIColor.tabDarkRedBG();
         // Set tabBar selected item color
-        UITabBar.appearance().tintColor = UIColor(red: 223/255, green: 58/255, blue: 9/255, alpha: 1);
+        UITabBar.appearance().tintColor = UIColor.highlightTextOrange();
         
-        // Set search bar tint
-        UISearchBar.appearance().barTintColor = UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8);
-        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)], forState: UIControlState.Normal);
+        // Set search bar tint and cancel button text color
+        UISearchBar.appearance().barTintColor = UIColor.searchDarkRed();
+        UISearchBar.appearance().tintColor = UIColor.highlightTextOrange();
+        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.highlightTextOrange()], forState: UIControlState.Normal);
 
         return true
     }
@@ -53,7 +54,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
 }
 
+extension UIColor {
+    static func darkRed() -> UIColor {
+        return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)
+    }
+    
+    static func searchDarkRed() -> UIColor {
+        return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)
+    }
+    
+    static func highlightTextOrange() -> UIColor {
+        return UIColor(red: 223/255, green: 58/255, blue: 9/255, alpha: 1)
+    }
+    
+    static func tabDarkRedBG() -> UIColor {
+        return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.3)
+    }
+}
