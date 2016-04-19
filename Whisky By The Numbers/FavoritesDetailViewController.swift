@@ -9,14 +9,37 @@
 import UIKit
 
 class FavoritesDetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
     
-    var detailWhiskey: Whiskey? {
-        didSet {
-        }
+    // MARK: Properties
+    @IBOutlet weak var whiskeyIcon: UIImageView!
+    @IBOutlet weak var whiskeyTitle: UILabel!
+    @IBOutlet weak var ratingSlider: UISlider!
+    @IBOutlet weak var styleValue: UILabel!
+    @IBOutlet weak var proofValue: UILabel!
+    @IBOutlet weak var priceValue: UILabel!
+    @IBOutlet weak var scoreValue: UILabel!
+    @IBOutlet weak var valueValue: UILabel!
+    
+    
+    var detailWhiskey: Whiskey!
+    
+    override func viewWillAppear(animated: Bool) {
+        configureView();
     }
     
+    func configureView() {
+        if let detailWhiskey = detailWhiskey {
+                whiskeyIcon.image = UIImage(named: detailWhiskey.image)
+                title = detailWhiskey.name
+                whiskeyTitle.text = detailWhiskey.name
+                ratingSlider.value = 4.0
+                styleValue.text = detailWhiskey.style
+                proofValue.text = detailWhiskey.proof
+                priceValue.text = detailWhiskey.price
+                scoreValue.text = detailWhiskey.score
+                valueValue.text = detailWhiskey.value
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

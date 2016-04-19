@@ -105,13 +105,13 @@
 			children = (
 				79311AF41CBEB90B00AF06BC /* AppDelegate.swift */,
 				79311AF61CBEB90B00AF06BC /* BlogViewController.swift */,
+				79311B261CC1A31E00AF06BC /* FavoritesViewController.swift */,
+				79311B281CC1A53400AF06BC /* FavoritesDetailViewController.swift */,
 				79311AFA1CBEB90B00AF06BC /* Main.storyboard */,
 				79311AFD1CBEB90B00AF06BC /* Assets.xcassets */,
 				79311AFF1CBEB90B00AF06BC /* LaunchScreen.storyboard */,
 				79311B021CBEB90B00AF06BC /* Info.plist */,
 				79311B241CC19C3900AF06BC /* Whiskey.swift */,
-				79311B261CC1A31E00AF06BC /* FavoritesViewController.swift */,
-				79311B281CC1A53400AF06BC /* FavoritesDetailViewController.swift */,
 			);
 			path = "Whisky By The Numbers";
 			sourceTree = "<group>";
@@ -496,6 +496,7 @@
 				79311B1D1CBEB90B00AF06BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79311B1E1CBEB90B00AF06BC /* Build configuration list for PBXNativeTarget "Whisky By The NumbersTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +505,7 @@
 				79311B201CBEB90B00AF06BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79311B211CBEB90B00AF06BC /* Build configuration list for PBXNativeTarget "Whisky By The NumbersUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +514,7 @@
 				79311B231CBEB90B00AF06BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

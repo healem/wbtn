@@ -21,14 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
         
         // Set tabBar color
-        UITabBar.appearance().barTintColor = UIColor.tabDarkRedBG();
+        UITabBar.appearance().barTintColor = UIColor.redDarkBG();
         // Set tabBar selected item color
-        UITabBar.appearance().tintColor = UIColor.highlightTextOrange();
+        UITabBar.appearance().tintColor = UIColor.orangeHighlightText();
         
         // Set search bar tint and cancel button text color
-        UISearchBar.appearance().barTintColor = UIColor.searchDarkRed();
-        UISearchBar.appearance().tintColor = UIColor.highlightTextOrange();
-        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.highlightTextOrange()], forState: UIControlState.Normal);
+        UISearchBar.appearance().barTintColor = UIColor.RedDarkSearch();
+        UISearchBar.appearance().tintColor = UIColor.orangeHighlightText();
+        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orangeHighlightText()], forState: UIControlState.Normal);
+        
+        // Set table cell appearance
+        UITableViewCell.appearance().backgroundColor = UIColor.redDark();
+        
+        // Set table view appearance
+        UITableView.appearance().backgroundColor = UIColor.redDark();
+        
+        // Set nav bar appearance
+        UINavigationBar.appearance().barTintColor = UIColor.redDarkBG();
+        UINavigationBar.appearance().tintColor = UIColor.orangeHighlightText();
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.orangeHighlightText()];
 
         return true
     }
@@ -58,19 +69,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UIColor {
-    static func darkRed() -> UIColor {
+    static func redDark() -> UIColor {
+        return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 1.0)
+    }
+    
+    static func RedDarkSearch() -> UIColor {
         return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)
     }
     
-    static func searchDarkRed() -> UIColor {
-        return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)
-    }
-    
-    static func highlightTextOrange() -> UIColor {
+    static func orangeHighlightText() -> UIColor {
         return UIColor(red: 223/255, green: 58/255, blue: 9/255, alpha: 1)
     }
     
-    static func tabDarkRedBG() -> UIColor {
+    static func redDarkBG() -> UIColor {
         return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.3)
+    }
+    
+    static func redMedium() -> UIColor {
+        return UIColor(red: 147/255, green: 0/255, blue: 10/255, alpha: 1.0)
+    }
+    
+    static func yellowHighlightText() -> UIColor {
+        return UIColor(red: 247/255, green: 206/255, blue: 14/255, alpha: 1.0)
+    }
+    
+    static func greyMedium() -> UIColor {
+        return UIColor(red: 56/255, green: 61/255, blue: 64/255, alpha: 1.0)
     }
 }
