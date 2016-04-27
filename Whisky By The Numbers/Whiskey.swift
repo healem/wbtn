@@ -9,17 +9,28 @@
 import Foundation
 
 struct Whiskey {
-    let score : String
-    let value : String
+    let id : Int
+    let score : Int
+    let value : Int
     let name : String
     let style : String
-    let proof : String
-    let price : String
-    let sweet : String
-    let sour : String
-    let heat : String
-    let smooth : String
-    let finish : String
-    let crisp : String
+    let proof : Int
+    let price : Float
+    let sweet : Float
+    let sour : Float
+    let heat : Float
+    let smooth : Float
+    let finish : Float
+    let crisp : Float
+    let leather : Float
+    let wood : Float
+    let smoke : Float
+    let citrus : Float
+    let floral : Float
+    let fruit : Float
+    let complexity : Float
+    let drinkability : Float
+    let mouthfeel : Float
     let image : String
+    let notes : String
 }

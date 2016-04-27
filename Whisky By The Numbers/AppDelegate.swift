@@ -97,3 +97,17 @@ extension UIColor {
         return UIColor(red: 56/255, green: 61/255, blue: 64/255, alpha: 1.0)
     }
 }
+
+extension Int {
+    func toString() -> String {
+        let myString = self.description
+        return myString
+    }
+}
+
+extension Float {
+    func toString() -> String {
+        let myString = self.description
+        return myString
+    }
+}

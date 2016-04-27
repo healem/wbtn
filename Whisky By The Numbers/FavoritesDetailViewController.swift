@@ -34,10 +34,10 @@ class FavoritesDetailViewController: UIViewController {
                 whiskeyTitle.text = detailWhiskey.name
                 ratingSlider.value = 4.0
                 styleValue.text = detailWhiskey.style
-                proofValue.text = detailWhiskey.proof
-                priceValue.text = detailWhiskey.price
-                scoreValue.text = detailWhiskey.score
-                valueValue.text = detailWhiskey.value
+                proofValue.text = detailWhiskey.proof.toString()
+                priceValue.text = detailWhiskey.price.toString()
+                scoreValue.text = detailWhiskey.score.toString()
+                valueValue.text = detailWhiskey.value.toString()
         }
     }
     
