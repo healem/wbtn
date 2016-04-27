@@ -27,15 +27,21 @@ class FavoritesViewController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
         
         whiskies = [
-            Whiskey(score:"51", value:"51", name:"Whiskey 1", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 2", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 3", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 4", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 5", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 6", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 7", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 8", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey"),
-            Whiskey(score:"51", value:"51", name:"Whiskey 9", style:"Misc", proof:"110", price:"$30", sweet:"1.75", sour:"3.5", heat:"3.75", smooth:"1.75", finish:"2", crisp:"2", image:"whiskey")
+            Whiskey(score:51, value:51, name:"Whiskey 1", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 2", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 3", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 4", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 5", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 6", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 7", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 8", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 9", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 10", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 11", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 12", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 13", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 14", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
+            Whiskey(score:51, value:51, name:"Whiskey 15", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, image:"whiskey"),
         ]
     }
     
@@ -69,7 +75,7 @@ class FavoritesViewController: UITableViewController {
         cell.textLabel?.textColor = UIColor.orangeHighlightText()
         
         // Set detail text and appearance
-        cell.detailTextLabel!.text = "Score: " + whiskey.score + " Value: " + whiskey.value
+        cell.detailTextLabel!.text = "Score: " + whiskey.score.toString() + " Value: " + whiskey.value.toString()
         cell.detailTextLabel?.textColor = UIColor.orangeHighlightText()
         
         // Set cell border appearance
