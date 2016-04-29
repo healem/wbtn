@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.orangeHighlightText();
         
         // Set search bar tint and cancel button text color
-        UISearchBar.appearance().barTintColor = UIColor.RedDarkSearch();
+        UISearchBar.appearance().barTintColor = UIColor.redDarkSearch();
         UISearchBar.appearance().tintColor = UIColor.orangeHighlightText();
         UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orangeHighlightText()], forState: UIControlState.Normal);
         
@@ -40,6 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.redDarkBG();
         UINavigationBar.appearance().tintColor = UIColor.orangeHighlightText();
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.orangeHighlightText()];
+        
+        // Set text view appearance
+        UITextView.appearance().backgroundColor = UIColor.redMediumDark();
+        UITextView.appearance().textColor = UIColor.orangeHighlightText();
 
         return true
     }
@@ -73,7 +77,11 @@ extension UIColor {
         return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 1.0)
     }
     
-    static func RedDarkSearch() -> UIColor {
+    static func redMediumDark() -> UIColor {
+        return UIColor(red: 82/255, green: 18/255, blue: 5/255, alpha: 1.0)
+    }
+    
+    static func redDarkSearch() -> UIColor {
         return UIColor(red: 40/255, green: 11/255, blue: 13/255, alpha: 0.8)
     }
     

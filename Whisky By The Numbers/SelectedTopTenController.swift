@@ -1,36 +1,19 @@
 //
-//  FavoritesViewController.swift
-//  Whisky By The Numbers
+//  SelectedTopTenController.swift
+//  Whiskey By The Numbers
 //
-//  Created by Mike Healey on 4/15/16.
+//  Created by Mike Healey on 4/28/16.
 //  Copyright © 2016 ByNumbers. All rights reserved.
 //
 
 import UIKit
 
-class FavoritesViewController: UITableViewController {
+class SelectedTopTenController: UITableViewController {
     
-    var whiskies = [Whiskey]()
-    var filteredWhiskies = [Whiskey]()
-    let searchController = UISearchController(searchResultsController: nil)
+    var selectedTopTenName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setup the Search Controller
-        searchController.searchResultsUpdater = self
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        
-        // Setup the Scope Bar
-        tableView.tableHeaderView = searchController.searchBar
-        
-        // Generate test whiskies
-        whiskies = [ self.generateWhiskeyForTest(0) ]
-        for i in 1...20 {
-            whiskies.append(self.generateWhiskeyForTest(i))
-        }
-
     }
     
     func generateWhiskeyForTest(index: Int) -> Whiskey{
@@ -53,24 +36,19 @@ class FavoritesViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
-            return whiskies.count
-        }
-        return whiskies.count
+        return 6
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let whiskey: Whiskey
-        whiskey = whiskies[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("FinalSelectedCell", forIndexPath: indexPath)
         
         // Set label text and appearance
-        cell.textLabel!.text = whiskey.name
+        cell.textLabel!.text = "Test Whiskey"
         cell.textLabel?.textColor = UIColor.orangeHighlightText()
         
         // Set detail text and appearance
-        cell.detailTextLabel!.text = "Score: " + whiskey.score.toString() + " Value: " + whiskey.value.toString()
-        cell.detailTextLabel?.textColor = UIColor.orangeHighlightText()
+        //cell.detailTextLabel!.text = "Score: 51 Value: 51"
+        //cell.detailTextLabel?.textColor = UIColor.orangeHighlightText()
         
         // Set cell border appearance
         cell.layer.borderColor = UIColor.redMedium().CGColor
@@ -91,28 +69,15 @@ class FavoritesViewController: UITableViewController {
         cellToDeSelect.contentView.backgroundColor = UIColor.redDark()
     }
     
-    
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showFavoritesDetail" {
-            if let destination = segue.destinationViewController as? FavoritesDetailViewController{
-                if let whiskeyIndex = tableView.indexPathForSelectedRow?.row {
-                    destination.detailWhiskey = whiskies[whiskeyIndex]
-                }
+        if segue.identifier == "showTopTenDetail" {
+            if let destination = segue.destinationViewController as? TopTenDetailController{
+                //if let whiskeyIndex = tableView.indexPathForSelectedRow?.row {
+                destination.selectedName = "Final"
+                //}
             }
         }
     }
-}
-
-//extension FavoritesViewController: UISearchBarDelegate {
-    // UISearchBar Delegate
-//    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
-//    }
-//}
-
-extension FavoritesViewController: UISearchResultsUpdating {
-    // UISearchResultsUpdating Delegate
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-    }
+    
 }
