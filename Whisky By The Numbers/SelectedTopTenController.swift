@@ -10,10 +10,17 @@ import UIKit
 
 class SelectedTopTenController: UITableViewController {
     
+    var whiskies = [Whiskey]()
     var selectedTopTenName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Generate test whiskies
+        whiskies = [ self.generateWhiskeyForTest(1) ]
+        for i in 2...10 {
+            whiskies.append(self.generateWhiskeyForTest(i))
+        }
     }
     
     func generateWhiskeyForTest(index: Int) -> Whiskey{
@@ -36,14 +43,16 @@ class SelectedTopTenController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return whiskies.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FinalSelectedCell", forIndexPath: indexPath)
+        let whiskey: Whiskey
+        whiskey = whiskies[indexPath.row]
         
         // Set label text and appearance
-        cell.textLabel!.text = "Test Whiskey"
+        cell.textLabel!.text = whiskey.name
         cell.textLabel?.textColor = UIColor.orangeHighlightText()
         
         // Set detail text and appearance
@@ -73,9 +82,9 @@ class SelectedTopTenController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTopTenDetail" {
             if let destination = segue.destinationViewController as? TopTenDetailController{
-                //if let whiskeyIndex = tableView.indexPathForSelectedRow?.row {
-                destination.selectedName = "Final"
-                //}
+                if let whiskeyIndex = tableView.indexPathForSelectedRow?.row {
+                    destination.detailWhiskey = whiskies[whiskeyIndex]
+                }
             }
         }
     }

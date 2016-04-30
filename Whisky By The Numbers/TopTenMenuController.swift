@@ -14,11 +14,7 @@ class TopTenMenuController: UITableViewController {
         super.viewDidLoad()
     }
     
-    func generateWhiskeyForTest(index: Int) -> Whiskey{
-        let whiskey = Whiskey(id:index, score:51, value:51, name:"Whiskey \(index)", style:"Misc", proof:110, price:30, sweet:1.75, sour:3.5, heat:3.75, smooth:1.75, finish:2, crisp:2, leather:1.75, wood:2, smoke:3, citrus:3.75, floral:2.75, fruit:1, complexity:2.75, drinkability:1, mouthfeel:3, image:"whiskey", notes:"Some verbose text here - asfghaleuglEFHAKJSDVNAUSINE UAGF ABSKJGBU A SBDGALSKHGBSDGJHB lkajbfdg lkjsdbfg sldfjgbsldfjgh sdlkgh ")
-        
-        return whiskey
-    }
+    let categories = [ "Highest User Rating", "Highest Score", "Best Value", "Most Drinkable", "Cheapest"]
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,14 +30,15 @@ class TopTenMenuController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return categories.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SelectedTenCell", forIndexPath: indexPath)
+        let category = categories[indexPath.row]
         
         // Set label text and appearance
-        cell.textLabel!.text = "Test Whiskey"
+        cell.textLabel!.text = category
         cell.textLabel?.textColor = UIColor.orangeHighlightText()
         
         // Set detail text and appearance
