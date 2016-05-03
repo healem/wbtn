@@ -8,27 +8,50 @@
 
 import UIKit
 
-class BlogViewController: UIViewController {
-
-    @IBOutlet weak var topTextBox: UITextView!
-    @IBOutlet weak var middleTextBox: UITextView!
-    @IBOutlet weak var bottomTextBox: UITextView!
+class BlogViewController: UITableViewController {
     
+    @IBOutlet var BlogTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for view in [ topTextBox, middleTextBox, bottomTextBox]{
-            view.layer.borderColor = UIColor.redMedium().CGColor
-            view.layer.borderWidth = 0.5
-            view.layer.cornerRadius = 5.0
-        }
+        configureTableView()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    
+    // MARK: Table View
+    func configureTableView() {
+        BlogTableView.estimatedRowHeight = 320.0
+        BlogTableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("BlogCell", forIndexPath: indexPath) as! BlogCellView
+        
+        cell.BloggerIcon.image = UIImage(named: "whiskey")
+        cell.BloggerName.text = "Snarky Dude"
+        cell.BlogEntry.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        
+        return cell
     }
 
 

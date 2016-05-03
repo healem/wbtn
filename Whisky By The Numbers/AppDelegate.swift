@@ -42,7 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.orangeHighlightText()];
         
         // Set text view appearance
-        UITextView.appearance().backgroundColor = UIColor.redMediumDark();
+        //UITextView.appearance().backgroundColor = UIColor.redMediumDark();
+        UITextView.appearance().backgroundColor = UIColor.redDark();
         UITextView.appearance().textColor = UIColor.orangeHighlightText();
 
         return true

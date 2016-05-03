@@ -26,7 +26,7 @@ class WhiskeyDetailNotesView: UIViewController {
         
         // set Notes box border appearance
         notesBox.layer.cornerRadius = 5.0
-        notesBox.layer.borderWidth = 0.5
+        notesBox.layer.borderWidth = 1.0
         notesBox.layer.borderColor = UIColor.redMedium().CGColor
     }
 
