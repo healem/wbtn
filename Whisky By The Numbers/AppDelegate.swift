@@ -45,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UITextView.appearance().backgroundColor = UIColor.redMediumDark();
         UITextView.appearance().backgroundColor = UIColor.redDark();
         UITextView.appearance().textColor = UIColor.orangeHighlightText();
+        
+        // Set collection view appearance
+        UICollectionView.appearance().backgroundColor = UIColor.redDarkBG();
+        UICollectionView.appearance().tintColor = UIColor.orangeHighlightText();
 
         return true
     }
