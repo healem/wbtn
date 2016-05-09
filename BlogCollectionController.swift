@@ -21,8 +21,9 @@ class BlogCollectionController: UICollectionViewController {
         // Do any additional setup after loading the view.
         
         let screenWidth = UIScreen.mainScreen().bounds.width
-        let layout = blogCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.estimatedItemSize = CGSizeMake(screenWidth - 10, 320)
+        if let layout = blogCollectionView.collectionViewLayout as? UICollectionViewFlowLayout{
+            layout.itemSize = CGSizeMake(screenWidth - 10, 320)
+        }
     }
 
     override func didReceiveMemoryWarning() {
