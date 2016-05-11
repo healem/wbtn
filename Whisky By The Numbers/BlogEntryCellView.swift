@@ -16,6 +16,10 @@ class BlogEntryCellView: UICollectionViewCell {
     @IBOutlet weak var ShareButton: UIButton!
     @IBOutlet weak var MoreDetailButton: UIButton!
     
+    // TODO
+    @IBAction func ShareButtonAction(sender: AnyObject) {
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,7 +28,7 @@ class BlogEntryCellView: UICollectionViewCell {
     
         // set Notes box border appearance
         BlogText.layer.cornerRadius = 5.0
-        BlogText.layer.borderWidth = 1.0
+        BlogText.layer.borderWidth = 0.0
         BlogText.layer.borderColor = UIColor.redMedium().CGColor
         BlogText.layer.masksToBounds = true
         //BlogText.layer.shadowOffset = CGSizeMake(-0.2, 0.2)

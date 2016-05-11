@@ -29,5 +29,11 @@ class WhiskeyDetailNotesView: UIViewController {
         notesBox.layer.borderWidth = 1.0
         notesBox.layer.borderColor = UIColor.redMedium().CGColor
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        notesBox.setContentOffset(CGPointZero, animated: false)
+    }
 
 }

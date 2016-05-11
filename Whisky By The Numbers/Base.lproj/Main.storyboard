@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GQR-e0-Wmh" id="74H-Rk-0yQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -104,7 +104,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ixA-Zw-69X" id="yXp-ny-yxT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -306,6 +306,9 @@
                                             </constraints>
                                             <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                                             <state key="normal" title="More Detail"/>
+                                            <connections>
+                                                <segue destination="imz-cM-BK7" kind="show" id="3wa-OM-agr"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAD-NL-v2v">
                                             <rect key="frame" x="13" y="279" width="155" height="15"/>
@@ -319,6 +322,9 @@
                                                     <exclude reference="DuS-yR-5Q0"/>
                                                 </mask>
                                             </variation>
+                                            <connections>
+                                                <action selector="ShareButtonAction:" destination="kVK-5B-lsP" eventType="touchUpInside" id="7dS-hM-mjr"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -406,6 +412,78 @@
             </objects>
             <point key="canvasLocation" x="822" y="331"/>
         </scene>
+        <!--Blog Detail View-->
+        <scene sceneID="evf-m9-Iif">
+            <objects>
+                <viewController id="imz-cM-BK7" customClass="BlogDetailView" customModule="Whiskey_By_The_Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hFB-eJ-5eG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ANc-dn-TQ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cgK-bE-H4R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is where Ads go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poY-KZ-uhu">
+                                <rect key="frame" x="20" y="505" width="560" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="COd-ZC-dDG">
+                                <rect key="frame" x="29" y="137" width="546" height="567.5"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yWv-m2-0wJ">
+                                <rect key="frame" x="29" y="69" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qig-Iw-Hdp"/>
+                                    <constraint firstAttribute="width" constant="60" id="tfC-N5-UNz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-Bc-3VI">
+                                <rect key="frame" x="97" y="88.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.043137254899999998" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V6D-Bc-3VI" firstAttribute="leading" secondItem="yWv-m2-0wJ" secondAttribute="trailing" constant="8" id="6g6-6j-Uju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="COd-ZC-dDG" secondAttribute="trailing" constant="5" id="G2o-Fb-FL2"/>
+                            <constraint firstItem="poY-KZ-uhu" firstAttribute="leading" secondItem="cgK-bE-H4R" secondAttribute="leadingMargin" id="HIK-IU-Cth"/>
+                            <constraint firstItem="ANc-dn-TQ3" firstAttribute="top" secondItem="poY-KZ-uhu" secondAttribute="bottom" constant="8" id="HN4-cI-1dE"/>
+                            <constraint firstItem="yWv-m2-0wJ" firstAttribute="top" secondItem="hFB-eJ-5eG" secondAttribute="bottom" constant="5" id="VAR-Bf-cbz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="poY-KZ-uhu" secondAttribute="trailing" id="dnX-ff-ECO"/>
+                            <constraint firstItem="poY-KZ-uhu" firstAttribute="top" secondItem="COd-ZC-dDG" secondAttribute="bottom" constant="5" id="icw-AW-p2L"/>
+                            <constraint firstItem="COd-ZC-dDG" firstAttribute="top" secondItem="yWv-m2-0wJ" secondAttribute="bottom" constant="8" id="mB7-yD-zZ6"/>
+                            <constraint firstItem="V6D-Bc-3VI" firstAttribute="centerY" secondItem="yWv-m2-0wJ" secondAttribute="centerY" id="qbe-0h-hPp"/>
+                            <constraint firstItem="yWv-m2-0wJ" firstAttribute="leading" secondItem="cgK-bE-H4R" secondAttribute="leadingMargin" constant="9" id="rAB-34-cp1"/>
+                            <constraint firstItem="COd-ZC-dDG" firstAttribute="leading" secondItem="cgK-bE-H4R" secondAttribute="leadingMargin" constant="9" id="s4W-kE-HZR"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="NNl-Bq-cqD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="KMx-uf-4hH">
+                            <connections>
+                                <action selector="ShareButton:" destination="imz-cM-BK7" id="Ioz-Zs-faU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="BlogDetailText" destination="COd-ZC-dDG" id="0ER-8r-4oa"/>
+                        <outlet property="BloggerDetailIcon" destination="yWv-m2-0wJ" id="33A-2j-PsQ"/>
+                        <outlet property="BloggerDetailName" destination="V6D-Bc-3VI" id="xwg-lS-8Ov"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxU-ap-O0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2389" y="-1120"/>
+        </scene>
         <!--WhiskeyDetailHeader-->
         <scene sceneID="GaK-ut-QUF">
             <objects>
@@ -415,7 +493,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sS0-zb-xdg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pIw-Nu-tQq">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="224"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="222"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-Vz-Tz4">
@@ -524,7 +602,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1ob-hl-y2Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HnT-Ru-VZX">
-                        <rect key="frame" x="0.0" y="0.0" width="560" height="207"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="195"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSe-g7-yuH">
@@ -576,8 +654,8 @@
         <image name="top_charts" width="27" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WM2-24-Ux1"/>
-        <segue reference="PB9-Th-ZBw"/>
+        <segue reference="aXT-cm-ybs"/>
+        <segue reference="QnM-n3-rxH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.87450980389999999" green="0.2274509804" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>
